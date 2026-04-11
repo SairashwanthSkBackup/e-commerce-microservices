@@ -1,0 +1,22 @@
+### Base URL
+@baseUrl = http://localhost:8080/ecommerce/api/auth
+
+
+### Register a new user
+POST {{baseUrl}}/register
+Content-Type: application/json
+
+{
+    "name": "testuser",
+    "email": "testuser@gmail.com",
+    "password": "testpassword"
+}
+
+### User login
+POST {{baseUrl}}/login
+Content-Type: application/json
+
+{
+    "email": "testuser@gmail.com",
+    "password": "testpassword"
+}
