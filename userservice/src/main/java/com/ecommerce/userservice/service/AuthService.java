@@ -27,8 +27,7 @@ public class AuthService {
         this.jwtUtil = jwtUtil;
     }
 
-    public void register(RegisterRequest request) {
-        System.out.println(roleRepository.findAll());
+    public String register(RegisterRequest request) {
         Role role = roleRepository.findByName("ROLE_USER")
                         .orElseThrow(() -> new RuntimeException("Role not found"));
 
@@ -41,7 +40,9 @@ public class AuthService {
 
         user.setRoles(role);
 
-        userRepository.save(user);
+        User savedUser = userRepository.save(user);
+
+        return jwtUtil.generateToken(savedUser.getEmail(), savedUser.getRoles().getName());
     }
     
     public String login(LoginRequest request) {
