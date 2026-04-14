@@ -1,0 +1,25 @@
+### Base URL
+@baseUrl = http://localhost:8083/ecommerce/api/orders
+
+
+### Create new product
+POST {{baseUrl}}
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjFAZ21haWwuY29tIiwicm9sZSI6IlJPTEVfVVNFUiIsImlhdCI6MTc3NjAxMDI5MiwiZXhwIjoxNzc2MDQ2MjkyfQ.C1Tl-8mqy2aEoo55sgoMpMFvvmQiS2gnZOne-uM6h_M
+
+{
+    "productId": 3,
+    "quantity": 2
+}
+
+
+### Get All products
+GET {{baseUrl}}
+Content-Type: application/json
+
+
+### Get Product by Id
+GET {{baseUrl}}/4
+Content-Type: application/json
+
+
