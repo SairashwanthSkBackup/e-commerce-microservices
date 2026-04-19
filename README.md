@@ -88,14 +88,15 @@ API Gateway (Port 8080)
 
 ## 📂 Project Structure
 
+```
 ecommerce-microservices/
-│
 ├── user-service/
 ├── product-service/
 ├── order-service/
 ├── api-gateway/
 ├── docker-compose.yml
 └── init.sql
+```
 
 ---
 
@@ -133,6 +134,7 @@ GET    /orders/{id}
 
 POST /auth/login
 
+```
 Request Body:
 {
   "email": "user@example.com",
@@ -143,6 +145,7 @@ Response:
 {
   "token": "eyJhbGciOiJIUzI1NiJ9..."
 }
+```
 
 ---
 
