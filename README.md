@@ -9,6 +9,7 @@ The system consists of multiple independent services communicating over REST API
 
 ## 🏗️ Architecture
 
+```
 Client (Postman / Frontend)
         ↓
 API Gateway (Port 8080)
@@ -20,7 +21,7 @@ API Gateway (Port 8080)
 -------------------------------------
         ↓
      PostgreSQL
-
+```
 ---
 
 ## ⚙️ Tech Stack
