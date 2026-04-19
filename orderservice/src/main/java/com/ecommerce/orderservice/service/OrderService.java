@@ -1,6 +1,11 @@
 package com.ecommerce.orderservice.service;
 
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 
@@ -19,11 +24,18 @@ public class OrderService {
     private final OrderRepository orderRepository;
     private final RestTemplate restTemplate;
 
-    public Order placeOrder(OrderRequest request) {
+    public Order placeOrder(OrderRequest request, String authHeader) {
         try {
-            String productUrl = "http://localhost:8082/ecommerce/api/products/" + request.getProductId();
+            String productUrl = "http://productservice:8082/ecommerce/api/products/" + request.getProductId();
 
-            Product product = restTemplate.getForObject(productUrl, Product.class);
+            HttpHeaders headers = new HttpHeaders();
+            headers.set("Authorization", authHeader);
+
+            HttpEntity<String> entity = new HttpEntity<>(headers);
+
+            ResponseEntity<Product> response = restTemplate.exchange(productUrl, HttpMethod.GET, entity, Product.class);
+
+            Product product = response.getBody();
 
             if (product == null) {
                 throw new ResourceNotFoundException("Product not found");

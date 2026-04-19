@@ -1,0 +1,18 @@
+### Base URL
+@baseUrl = http://localhost:8080/ecommerce/api/orders
+
+@token = eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjFAZ21haWwuY29tIiwicm9sZSI6IlJPTEVfVVNFUiIsImlhdCI6MTc3NjYwMTA2NSwiZXhwIjoxNzc2NjM3MDY1fQ.7mEw7Qcq13845uabSJVElH_Sjjcbi48nm4RaJ3iVy2c
+
+### Create new order
+POST {{baseUrl}}
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "userId": 1,
+    "productId": 1,
+    "quantity": 2
+}
+
+
+

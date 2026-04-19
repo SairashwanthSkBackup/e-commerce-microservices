@@ -1,7 +1,8 @@
 ### Base URL
-@baseUrl = http://localhost:8082/ecommerce/api/products
+@baseUrl = http://localhost:8080/ecommerce/api/products
 
-@token = eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjJAZ21haWwuY29tIiwicm9sZSI6IlJPTEVfVVNFUiIsImlhdCI6MTc3NjU3NjM5NCwiZXhwIjoxNzc2NjEyMzk0fQ.S8V1-DucuaMgKFViE9H8sg_Cgw1mG7oYgY4Iy8IDISs
+@token = eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjFAZ21haWwuY29tIiwicm9sZSI6IlJPTEVfVVNFUiIsImlhdCI6MTc3NjYwMTA2NSwiZXhwIjoxNzc2NjM3MDY1fQ.7mEw7Qcq13845uabSJVElH_Sjjcbi48nm4RaJ3iVy2c
+
 
 ### Create new product
 POST {{baseUrl}}
@@ -23,7 +24,7 @@ Authorization: Bearer {{token}}
 
 
 ### Get Product by Id
-GET {{baseUrl}}/4
+GET {{baseUrl}}/1
 Content-Type: application/json
 Authorization: Bearer {{token}}
 

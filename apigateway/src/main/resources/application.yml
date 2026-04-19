@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    gateway:
+      default-filters:
+        - PreserveHostHeader
+      routes:
+        - id: userservice
+          uri: http://userservice:8081
+          predicates:
+            - Path=/ecommerce/api/auth/**
+
+        - id: productservice
+          uri: http://productservice:8082
+          predicates:
+            - Path=/ecommerce/api/products/**
+
+        - id: orderservice
+          uri: http://orderservice:8083
+          predicates:
+            - Path=/ecommerce/api/orders/**
