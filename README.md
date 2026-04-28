@@ -9,6 +9,7 @@ The system consists of multiple independent services communicating over REST API
 
 ## 🏗️ Architecture
 
+```
 Client (Postman / Frontend)
         ↓
 API Gateway (Port 8080)
@@ -20,7 +21,7 @@ API Gateway (Port 8080)
 -------------------------------------
         ↓
      PostgreSQL
-
+```
 ---
 
 ## ⚙️ Tech Stack
@@ -87,14 +88,15 @@ API Gateway (Port 8080)
 
 ## 📂 Project Structure
 
+```
 ecommerce-microservices/
-│
 ├── user-service/
 ├── product-service/
 ├── order-service/
 ├── api-gateway/
 ├── docker-compose.yml
 └── init.sql
+```
 
 ---
 
@@ -132,6 +134,7 @@ GET    /orders/{id}
 
 POST /auth/login
 
+```
 Request Body:
 {
   "email": "user@example.com",
@@ -142,6 +145,7 @@ Response:
 {
   "token": "eyJhbGciOiJIUzI1NiJ9..."
 }
+```
 
 ---
 
