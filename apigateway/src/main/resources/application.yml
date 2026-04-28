@@ -21,3 +21,16 @@ spring:
           uri: http://orderservice:8083
           predicates:
             - Path=/ecommerce/api/orders/**
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: 
+              - "https://solid-zebra-v5wvp755gq9hpv4j-3000.app.github.dev"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+              - OPTIONS
+            allowedHeaders: "*"
+            allowCredentials: true

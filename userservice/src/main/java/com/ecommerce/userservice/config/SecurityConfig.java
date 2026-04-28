@@ -29,7 +29,7 @@ public class SecurityConfig {
         http.csrf(csrf -> csrf.disable())
         .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))  
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/ecommerce/api/auth/**").permitAll()
+                .requestMatchers("/ecommerce/api/auth/**","/ecommerce/api/products/**").permitAll()
                 .anyRequest().authenticated())
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
         ;
