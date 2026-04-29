@@ -1,7 +1,7 @@
 ### Base URL
 @baseUrl = http://localhost:8080/ecommerce/api/products
 
-@token = eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjFAZ21haWwuY29tIiwicm9sZSI6IlJPTEVfVVNFUiIsImlhdCI6MTc3NzM4NDQxMiwiZXhwIjoxNzc3NDIwNDEyfQ.YpLxRi67mw-bmmBISInZWBVW0ChjP33w8EZEyv7nehg
+@token = eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjFAZ21haWwuY29tIiwicm9sZSI6IlJPTEVfVVNFUiIsImlhdCI6MTc3NzQ0NTY3NCwiZXhwIjoxNzc3NDgxNjc0fQ.wOkLmL7HjiNLiKUDhOGYccX8vaiApu-8XImd6vvcUbg
 
 
 ### Create new product
@@ -10,8 +10,8 @@ Content-Type: application/json
 Authorization: Bearer {{token}}
 
 {
-    "name": "Product2",
-    "description": "Description of product 2",
+    "name": "Product1",
+    "description": "Description of product 1",
     "price": 10,
     "quantity": 100
 }

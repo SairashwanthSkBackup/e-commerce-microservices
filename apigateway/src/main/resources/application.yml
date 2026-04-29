@@ -25,7 +25,7 @@ spring:
         corsConfigurations:
           '[/**]':
             allowedOrigins: 
-              - "https://solid-zebra-v5wvp755gq9hpv4j-3000.app.github.dev"
+              - "https://glorious-zebra-vpvrw5g77p4v2wr7x-3000.app.github.dev"
             allowedMethods:
               - GET
               - POST
