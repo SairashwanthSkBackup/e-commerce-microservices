@@ -1,7 +1,7 @@
 ### Base URL
 @baseUrl = http://localhost:8080/ecommerce/api/cart
 
-@token = eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjFAZ21haWwuY29tIiwicm9sZSI6IlJPTEVfVVNFUiIsImlhdCI6MTc3NzQ2Njc3NiwiZXhwIjoxNzc3NTAyNzc2fQ.8WveUzjWl2T36xM-d_sDtJv82YPtKEEPP7tjjKcV-Bs
+@token = eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjFAZ21haWwuY29tIiwicm9sZSI6IlJPTEVfVVNFUiIsImlhdCI6MTc3NzQ3MTExMSwiZXhwIjoxNzc3NTA3MTExfQ.lPzfP0x3c9N0a3XhEsHak4EOSkJj6VbnLPzSmjIkX08
 
 ### Add item to cart
 POST {{baseUrl}}
